@@ -1,4 +1,4 @@
-a, b, c = input('Ведите 3 стороны треугольника: ').split(' ')
+a, b, c = input('Ведите 3 стороны треугольника: ').split(' ')  #split = в ряд
 
 p = (float(a) + float(b) + float(c)) / 2
 
