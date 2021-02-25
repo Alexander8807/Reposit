@@ -16,10 +16,13 @@ with open("Text1.txt", "r", encoding="UTF8") as rfile:
     new = ", ".join(new)
 
     with open("Results.txt", "w", encoding="UTF8") as wfile:
-        wfile.write("Количество слов в тексте равно: " + str(len(data.split(" "))) + "\n")
+        wfile.write("Количество слов в тексте равно: " + str(len(words)) + "\n")
         wfile.write("Количество уникальных слов в тексте равно: " + str(len(set(words))) + "\n")
         wfile.write("Наиболее часто встречаются слова: " + str(new) + ".")
-rfile.close()
+
+
+
+
 
 
 

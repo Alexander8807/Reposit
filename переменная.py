@@ -12,4 +12,5 @@ print("Hello {1}. Your salary is {0}".format(worker1, salary1))
 a, b, c = input("Please enter something: ").split(', ')   #Несколько переменных задать в строку
 print(a, b, c)
 
+#max  min  значения
 
