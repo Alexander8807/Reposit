@@ -1,35 +1,6 @@
-import csv
+import pandas as pd
 
-with open("TableHome.csv", "r", encoding="UTF8") as homefile:
-    csv_reader = csv.reader(homefile)
-    next(csv_reader)
-    next(csv_reader)
+df = pd.read_csv("TableHome.csv", header=1)
+socsup = df.sort_values("Social support").head(11)
 
-    for line in csv_reader:
-        socsup = line[4]
-        socsup = str.split(socsup)
-
-        for num in socsup:
-            print(socsup)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+socsup.to_csv("TableHome1.csv", columns=["Country or region", "Social support"])
