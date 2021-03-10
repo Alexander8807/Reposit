@@ -9,5 +9,13 @@ r = requests.get("https://gammatest.net/course/python/")
 soup = BS(r.content, "html.parser")
 print(soup.prettify()) #показать код со всеми отступами
 
-print(soup.title)  #вывести title сайта
+print(soup.title)  #вывести title сайта в виде текста
 print(soup.title.text)  #только текст title
+
+match = soup.findAll("div", class_="col-md-12 col-sm-12")  #поиск
+print(match[0])  #получить все совпадения
+
+
+
+
+
