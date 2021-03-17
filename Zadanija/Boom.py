@@ -11,7 +11,7 @@ def maxHL():
             continue
         else:
             hmax = ((V0**2) * (math.sin(a) * math.sin(a))) / (2 * g)
-            lmax = ((V0**2) * (math.sin(2 * a))) / g
+            lmax = ((V0**2) * (2 * math.sin(a) * math.cos(a))) / g
             print("Максимальная высота полета вашего снаряда равна: " + str(hmax) + "\n" + "Максимальная длина полета вашего снаряда равна: " + str(lmax))
             exit()
 maxHL()
