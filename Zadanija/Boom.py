@@ -10,8 +10,9 @@ def maxHL():
             print("Вы ввели неверный символ, попробуйте еще")
             continue
         else:
+            a = math.sin(math.radians(a))
             hmax = ((V0**2) * (math.sin(a) * math.sin(a))) / (2 * g)
             lmax = ((V0**2) * (2 * math.sin(a) * math.cos(a))) / g
-            print("Максимальная высота полета вашего снаряда равна: " + str(hmax) + "\n" + "Максимальная длина полета вашего снаряда равна: " + str(lmax))
+            print("Максимальная высота полета вашего снаряда равна: " + str(hmax) + "\nМаксимальная длина полета вашего снаряда равна: " + str(lmax))
             exit()
 maxHL()
