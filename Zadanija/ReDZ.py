@@ -31,7 +31,7 @@ import re
 #    for match in matches:
 #        print("Имя: " + str(match))
 #    for match1 in matches1:
-#            print("Адрес: " + str(match1))
+#        print("Адрес: " + str(match1))
 
 
 #stroka = input("Введите свой текст: ")
@@ -43,6 +43,10 @@ import re
 #    print("No match")
 
 
-
-
-
+isikukood =  "38804210398"
+pattern = re.compile(r"[3-6][0-9][0-9][0-1][0-9][0-3][0-9]\d{4}")
+matches = pattern.findall(isikukood)
+if matches:
+    print("Ваш личный код верен: " + isikukood)
+else:
+    print("Ваш личный код неверен")
