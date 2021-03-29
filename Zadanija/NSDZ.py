@@ -2,8 +2,11 @@ import os
 import time
 
 os.chdir("./needs_sorting")
-os.makedirs("images")
-os.makedirs("text_files")
+try:
+    os.makedirs("images")
+    os.makedirs("text_files")
+except:
+    pass
 
 time.sleep(1)
 
@@ -17,7 +20,8 @@ for file in os.listdir():
 
 
 os.chdir("./text_files")
-a.append(os.listdir("C:/Users/user/PycharmProjects/Reposit1/Zadanija/needs_sorting/text_files/"))
+a.append(os.listdir())
+print(os.listdir())
 for file1 in os.listdir():
     a.append(os.stat(file1)[6])
     a.append(time.ctime(os.stat(file1)[8]))
@@ -25,7 +29,7 @@ with open("x_file.txt", "w", encoding="UTF8") as text_a_file:
     text_a_file.write(str(a))
 
 os.chdir("../images")
-b.append(os.listdir("C:/Users/user/PycharmProjects/Reposit1/Zadanija/needs_sorting/images/"))
+b.append(os.listdir())
 for file1 in os.listdir():
     b.append(os.stat(file1)[6])
     b.append(time.ctime(os.stat(file1)[8]))
